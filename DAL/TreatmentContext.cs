@@ -18,8 +18,9 @@ namespace DAL
 
 
         public TreatmentContext()
-            : base("name = Model")
+            : base("data source =.\\SQLEXPRESS; initial catalog = project; integrated security = SSPI")
         {
+
 
         }
 

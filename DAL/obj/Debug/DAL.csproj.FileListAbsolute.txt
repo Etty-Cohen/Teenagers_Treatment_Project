@@ -13,3 +13,5 @@ C:\Users\etty2\Desktop\project\DAL\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.dll
 C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.pdb
+C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.Migrations.initialModel.resources
+C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
