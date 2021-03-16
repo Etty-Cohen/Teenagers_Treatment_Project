@@ -57,6 +57,10 @@
     <Compile Include="Migrations\202103152119532_initialModel.designer.cs">
       <DependentUpon>202103152119532_initialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103161933011_UpdateClassVolunteerTeenager.cs" />
+    <Compile Include="Migrations\202103161933011_UpdateClassVolunteerTeenager.designer.cs">
+      <DependentUpon>202103161933011_UpdateClassVolunteerTeenager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TreatmentContext.cs" />
@@ -79,6 +83,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202103152119532_initialModel.resx">
       <DependentUpon>202103152119532_initialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103161933011_UpdateClassVolunteerTeenager.resx">
+      <DependentUpon>202103161933011_UpdateClassVolunteerTeenager.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

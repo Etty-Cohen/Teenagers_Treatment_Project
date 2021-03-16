@@ -12,6 +12,8 @@ namespace BE
 
         public int VolunteerId { get; set; }
 
+        public virtual Volunteer Volunteer { get; set; }
+
         public int MentorId { get; set; }
 
         public int TeenagerId { get; set; }
@@ -31,6 +33,7 @@ namespace BE
             //StartTime = לקחת זמן של עכשיו
             //Status = OPENED; // להוסיף ENUM
             // מתי מחפשים מתנדב? ישר שנפתחת פניה?
+            Treatments = new HashSet<Treatment>();
         }
 
         public Treatment() { }
