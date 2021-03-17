@@ -23,6 +23,7 @@ namespace BE
             base(idNumber, firstName, lastName, phoneNumber, mailAddress, address, password)
         {
             Volunteers = new HashSet<Volunteer>();
+            Treatments = new HashSet<Treatment>();
             //To Do - מאיפה המספר סידורי? מוגרל רנדומלית?
 
         }

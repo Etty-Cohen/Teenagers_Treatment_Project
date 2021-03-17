@@ -10,11 +10,13 @@ namespace BE
     {
         public int TreatmentId { get; set; }
 
-        public int VolunteerId { get; set; }
-
         public virtual Volunteer Volunteer { get; set; }
 
+        public int VolunteerId { get; set; }
+
         public int MentorId { get; set; }
+
+        public virtual Teenager Teenager { get; set; }
 
         public int TeenagerId { get; set; }
 
@@ -28,7 +30,6 @@ namespace BE
 
         public Treatment(int treatmentMethod, Teenager teenager)
         {
-            TreatmentId = 0; // To Do איזה מספר?
             TreatmentMethod = treatmentMethod;
             //StartTime = לקחת זמן של עכשיו
             //Status = OPENED; // להוסיף ENUM

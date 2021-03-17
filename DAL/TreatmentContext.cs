@@ -42,23 +42,17 @@ namespace DAL
             modelBuilder.Entity<Volunteer>()
                 .HasMany(v => v.Treatments)
                 .WithOptional(t => t.Volunteer)
-                .HasForeignKey(t => t.VolunteerId);
+                .HasForeignKey(t => t.VolunteerId)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Teenager>()
                 .HasMany(t => t.Treatments)
                 .WithRequired(t => t.Teenager)
-                .HasForeignKey(t => t.TeenagerId);
+                .HasForeignKey(t => t.TeenagerId)
+                .WillCascadeOnDelete(false);
 
 
-            //.WillCascadeOnDelete(false);
-            // modelBuilder.Entity<Distribution>()
-            //  .HasOptional<User>(s => s.Volunteer)
-            //  .WithMany()
-            //  .WillCascadeOnDelete(false);
-            //    modelBuilder.Entity<Distribution>()
-            //  .HasOptional<User>(s => s.Admin)
-            //  .WithMany()
-            //  .WillCascadeOnDelete(false);
+            
             //    modelBuilder.Entity<Package>().Property(p => p.RecipientId).IsOptional();
             //    modelBuilder.Entity<Distribution>().Property(p => p.AdminId).IsOptional();
             //    modelBuilder.Entity<Distribution>().Property(p => p.VolunteerId).IsOptional();
