@@ -20,23 +20,22 @@ namespace BE
 
         public int TeenagerId { get; set; }
 
-        public int TreatmentMethod { get; set; }
+        public TreatmentTypes TreatmentMethod { get; set; }
 
         public DateTime StartTime { get; set; }
 
         public DateTime TreatDurMin { get; set; }
-        public int Status { get; set; }
+        public StatusTypes Status { get; set; }
 
 
-        public Treatment(int treatmentMethod, Teenager teenager)
+        public Treatment(TreatmentTypes treatmentMethod, Teenager teenager)
         {
             TreatmentMethod = treatmentMethod;
-            //StartTime = לקחת זמן של עכשיו
-            //Status = OPENED; // להוסיף ENUM
-            // מתי מחפשים מתנדב? ישר שנפתחת פניה?
-            Treatments = new HashSet<Treatment>();
+            Teenager = teenager;
+            TeenagerId = teenager.TeenagerId;
+            StartTime = DateTime.Now;
+            Status = StatusTypes.OPENED;
         }
 
-        public Treatment() { }
-}
+    }
 }

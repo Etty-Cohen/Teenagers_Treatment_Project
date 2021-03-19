@@ -12,12 +12,7 @@ namespace BE
 
         public Admin(string idNumber, string firstName, string lastName, string phoneNumber, string mailAddress, Address address, string password):
             base(idNumber, firstName, lastName, phoneNumber, mailAddress, address, password)
-        {
-            //To Do - מאיפה המספר סידורי? מוגרל רנדומלית?
-
-        }
-
-
+        {}
         
     }
 }

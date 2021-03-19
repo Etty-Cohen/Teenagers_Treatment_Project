@@ -20,8 +20,6 @@ namespace BE
         {
             Teenagers = new HashSet<Teenager>();
             Treatments = new HashSet<Treatment>();
-            //To Do - מאיפה המספר סידורי? מוגרל רנדומלית?
-
         }
 
 
