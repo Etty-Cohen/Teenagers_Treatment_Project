@@ -21,9 +21,20 @@ namespace BE
         public DateTime AppointmentDate { get; set; }
 
 
-        public Appointment()
+        public Appointment(int teenagerId, int mentorId, DateTime appointmentDate)
         {
-            // To Do
+            TeenagerId = teenagerId;
+            MentorId = mentorId;
+            AppointmentDate = appointmentDate;
         }
-    }
+
+        public bool addConclusion(string conclusion)
+        {
+            if (Conclusion == null)
+            {
+                Conclusion = conclusion;
+                return true;
+            }
+            return false;
+        }
 }

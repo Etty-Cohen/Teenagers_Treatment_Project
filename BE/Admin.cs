@@ -10,6 +10,8 @@ namespace BE
     {
         public int AdminId { get; set; }
 
+        public int Area { get; set; } // To Do להוסיף ENUM של כל האזורים, ואז במקום אינטגר שיהיה מסוג האינם. וכן להוסיף לבנאי ופונק' התאמת איזור.
+
         public Admin(string idNumber, string firstName, string lastName, string phoneNumber, string mailAddress, Address address, string password):
             base(idNumber, firstName, lastName, phoneNumber, mailAddress, address, password)
         {}
