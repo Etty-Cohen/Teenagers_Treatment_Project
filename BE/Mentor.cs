@@ -7,29 +7,18 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-    public class Mentor : User
+    public class Mentor : Helper
     {
         public int MentorId { get; set; }
 
-        public int AdminId { get; set; }
 
-        public Mentor(string idNumber, string firstName, string lastName, string phoneNumber, string mailAddress, Address address, string password, int adminId) :
-            base(idNumber, firstName, lastName, phoneNumber, mailAddress, address, password)
-        {
-            AdminId = AdminId;
-        }
+        public virtual ICollection<Appointment> Appointments { get; set; }
 
 
         public Mentor(string idNumber, string firstName, string lastName, string phoneNumber, string mailAddress, Address address, string password) :
             base(idNumber, firstName, lastName, phoneNumber, mailAddress, address, password)
         {
-            AdminId = this.findAdmin();
-        }
-
-         public int findAdmin()
-        {
-            int adminId = 0; // To Do
-            return adminId;
+            Appointments = new HashSet<Appointment>();
         }
 
 

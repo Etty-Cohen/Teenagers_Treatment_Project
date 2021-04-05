@@ -19,6 +19,8 @@ namespace BE
 
         public int VolunteerId { get; set; }
 
+        public virtual Mentor Mentor { get; set; }
+
         public int MentorId { get; set; }
 
         public Teenager(string idNumber, string firstName, string lastName, string phoneNumber, string mailAddress, Address address, string password) :

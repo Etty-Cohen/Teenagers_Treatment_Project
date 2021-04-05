@@ -14,8 +14,6 @@ namespace BE
 
         public int VolunteerId { get; set; }
 
-        public int MentorId { get; set; }
-
         public virtual Teenager Teenager { get; set; }
 
         public int TeenagerId { get; set; }
@@ -25,6 +23,9 @@ namespace BE
         public DateTime StartTime { get; set; }
 
         public DateTime TreatDurMin { get; set; }
+
+        public string Conclusion { get; set; }
+
         public StatusTypes Status { get; set; }
 
 

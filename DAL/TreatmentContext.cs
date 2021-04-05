@@ -18,6 +18,7 @@ namespace DAL
         public virtual DbSet<Mentor> Mentors { get; set; }
         public virtual DbSet<Volunteer> Volunteers { get; set; }
         public virtual DbSet<Treatment‏> Treatment‏s { get; set; }
+        public virtual DbSet<Appointment> Appointments { get; set; }//To Do להוסיף את כל מה שצריך בשביל הטבלה כולל קשרים והוספות במחלקות האחרות
         public virtual DbSet<Teenager‏> Teenager‏s { get; set; }
 
 
@@ -26,14 +27,30 @@ namespace DAL
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            /*modelBuilder.Entity<Mentor>()
+            modelBuilder.Entity<Mentor>()
                 .HasMany(m => m.Teenagers‏)
-                .WithMany(t => t.Volunteers);
+                .WithOptional(t => t.Mentor)
+                .HasForeignKey(t => t.MentorId)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Mentor>()
-                .HasMany(v => v.Treatments)
-                .WithOptional(t => t.Volunteer)
-                .HasForeignKey(t => t.VolunteerId);*/
+                .HasMany(m => m.Appointments)
+                .WithRequired(a => a.Mentor)
+                .HasForeignKey(a => a.MentorId)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Admin>()
+                .HasMany(a => a.Mentors)
+                .WithRequired(m => m.Admin)
+                .HasForeignKey(m => m.AdminId)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Admin>()
+                .HasMany(a => a.Volunteers)
+                .WithRequired(v => v.Admin)
+                .HasForeignKey(v => v.AdminId)
+                .WillCascadeOnDelete(false);
+
 
             modelBuilder.Entity<Volunteer>()
                 .HasMany(v => v.Teenagers‏)
@@ -52,7 +69,7 @@ namespace DAL
                 .WillCascadeOnDelete(false);
 
 
-            
+            // To Do
             //    modelBuilder.Entity<Package>().Property(p => p.RecipientId).IsOptional();
             //    modelBuilder.Entity<Distribution>().Property(p => p.AdminId).IsOptional();
             //    modelBuilder.Entity<Distribution>().Property(p => p.VolunteerId).IsOptional();

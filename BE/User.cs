@@ -15,6 +15,7 @@ namespace BE
         public string MailAddress { get; set; }
         public Address Address { get; set; }
         public string Password { get; set; }
+        public bool IsActive { get; set; }
 
         public User(string idNumber, string firstName, string lastName, string phoneNumber, string mailAddress, Address address, string password)
         {
@@ -25,6 +26,7 @@ namespace BE
             MailAddress = mailAddress;
             Address = address;
             Password = password;
+            IsActive = true;
         }
 
         public Address GetAddress()

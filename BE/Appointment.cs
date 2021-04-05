@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-    class Appointment
+    public class Appointment
     {
         public int AppointmentId { get; set; }
 
@@ -16,9 +16,12 @@ namespace BE
 
         public int TeenagerId { get; set; }
 
-        string Conclusion { get; set; }
+        public string Conclusion { get; set; }
 
         public DateTime AppointmentDate { get; set; }
+
+        public virtual Mentor Mentor { get; set; }
+
 
 
         public Appointment(int teenagerId, int mentorId, DateTime appointmentDate)
