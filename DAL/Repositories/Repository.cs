@@ -5,10 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL.Interfaces;
 using BE;
-
 namespace DAL.Repositories
 {
-    class Repository : IRepository
+    public class Repository : IRepository
     {
 
         #region update db
@@ -157,6 +156,23 @@ namespace DAL.Repositories
             return result;
         }
 
+        public List<Volunteer> GetAllVolunteersWithSelect(Func<Volunteer, bool> predicate = null)
+        {
+            List<Volunteer> result = new List<Volunteer>();
+            using (var context = new TreatmentContext())
+            {
+                if (predicate == null)
+                    result = context.Volunteers
+                        .Select(v =>  v.FirstName)
+                        .ToList();
+                else
+                {
+                    result = context.Volunteers.Include(v => v.FirstName).Include(Address).Include().Where(predicate).ToList();
+                }
+            }
+            return result;
+        }
+
         public List<Admin> GetAllAdmins(Func<Admin, bool> predicate = null)
         {
             List<Admin> result = new List<Admin>();
@@ -222,7 +238,7 @@ namespace DAL.Repositories
         public List<Appointment> GetAllAppointments(Func<Appointment, bool> predicate = null)
         {
             List<Appointment> result = new List<Appointment>();
-            using (var context = new AppointmentContext())
+            using (var context = new TreatmentContext())
             {
                 if (predicate == null)
                     result = context.Appointments.ToList();

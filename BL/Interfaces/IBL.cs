@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using BE;
 
-namespace DAL.Interfaces
+namespace BL.Interfaces
 {
-    public interface IRepository
+    public interface IBL
     {
         void AddVolunteer(Volunteer person);
         void RemoveVolunteer(Volunteer person);
@@ -23,13 +23,13 @@ namespace DAL.Interfaces
         void UpdateAppointment(Appointment appointment);
 
         List<Volunteer> GetAllVolunteers(Func<Volunteer, bool> predicate = null);
-        List<Volunteer> GetAllVolunteersWithSelect(Func<Volunteer, bool> predicate = null);
         List<Admin> GetAllAdmins(Func<Admin, bool> predicate = null);
         List<Mentor> GetAllMentors(Func<Mentor, bool> predicate = null);
         List<Teenager> GetAllTeenagers(Func<Teenager, bool> predicate = null);
         List<Treatment> GetAllTreatments(Func<Treatment, bool> predicate = null);
         List<Appointment> GetAllAppointments(Func<Appointment, bool> predicate = null);
 
-        //JsonAddress GetAddressDetails(Address address);
+        List<Volunteer> FindClosetVolunteers(Address address);
+        int FindClosetAdmin();
     }
 }

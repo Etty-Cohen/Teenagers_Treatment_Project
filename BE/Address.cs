@@ -10,13 +10,17 @@ namespace BE
     {
 
         public string City { get; set; }
+
+        public Areas Area { get; set; }
+
         public string Street { get; set; }
         public int BuildingNumber { get; set; }
     
 
-        public Address(string City, string Street, int BuildingNumber)
+        public Address(string City, Areas Area, string Street, int BuildingNumber)
         {
             this.City = City;
+            this.Area = Area;
             this.Street = Street;
             this.BuildingNumber = BuildingNumber;
         }
@@ -24,13 +28,14 @@ namespace BE
         public Address(Address address)
         {
             City = address.City;
+            Area = address.Area;
             Street = address.Street;
             BuildingNumber = address.BuildingNumber;
         }
 
         public override string ToString()
         {
-            return Street + " " + BuildingNumber + " " + City;
+            return Street + " " + BuildingNumber + " " + City + " " + Area;
         }
     }
 }

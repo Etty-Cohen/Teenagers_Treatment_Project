@@ -47,15 +47,9 @@ namespace BE
 
         public void SetMailAddress(string mailAddress)
         {
-            if (isMailAdress(mailAddress))
-                MailAddress = mailAddress;
+            MailAddress = mailAddress;
         }
 
-        private static bool isMailAdress(string mailAddress)
-        {
-            //To Do 
-            return true;
-        }
 
         public string GetFirstName()
         {
@@ -82,20 +76,10 @@ namespace BE
             return Password;
         }
 
-        public bool SetPassword(string password)
+        public void SetPassword(string password)
         {
-            if (validPassword(password))
-            {
-                Password = password;
-                return true;
-            }
-            return false;     
+    
         }
 
-        private static bool validPassword(string password)
-        {
-            //To Do
-            return true;
-        }
     }
 }
