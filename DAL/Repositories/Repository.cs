@@ -155,8 +155,13 @@ namespace DAL.Repositories
             }
             return result;
         }
-
         public List<Volunteer> GetAllVolunteersWithSelect(Func<Volunteer, bool> predicate = null)
+        {
+            List<Volunteer> result = new List<Volunteer>();
+            return result;
+        }
+
+       /* public List<Volunteer> GetAllVolunteersWithSelect(Func<Volunteer, bool> predicate = null)
         {
             List<Volunteer> result = new List<Volunteer>();
             using (var context = new TreatmentContext())
@@ -171,7 +176,7 @@ namespace DAL.Repositories
                 }
             }
             return result;
-        }
+        }*/
 
         public List<Admin> GetAllAdmins(Func<Admin, bool> predicate = null)
         {

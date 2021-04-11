@@ -31,7 +31,7 @@ namespace BE
             AppointmentDate = appointmentDate;
         }
 
-        public bool addConclusion(string conclusion)
+        public bool AddConclusion(string conclusion)
         {
             if (Conclusion == null)
             {
@@ -40,4 +40,5 @@ namespace BE
             }
             return false;
         }
+    }
 }
