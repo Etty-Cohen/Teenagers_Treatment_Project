@@ -54,7 +54,7 @@
     <Compile Include="BLImp.cs" />
     <Compile Include="Interfaces\IBL.cs" />
     <Compile Include="MyBL.cs" />
-    <Compile Include="NoCEOException.cs" />
+    <Compile Include="Exceptions\NoCEOException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -71,9 +71,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Exceptions\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
