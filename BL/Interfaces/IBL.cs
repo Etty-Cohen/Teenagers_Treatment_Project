@@ -29,6 +29,10 @@ namespace BL.Interfaces
         List<Treatment> GetAllTreatments(Func<Treatment, bool> predicate = null);
         List<Appointment> GetAllAppointments(Func<Appointment, bool> predicate = null);
 
+
+
+        int GetCEOAdmin();
+
         List<Volunteer> FindClosetVolunteers(Address address);
         int FindClosetAdmin();
     }

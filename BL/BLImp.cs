@@ -7,8 +7,10 @@ using BE;
 using BL.Interfaces;
 using DAL.Interfaces;
 using DAL.Repositories;
+
 namespace BL
 {
+
     class BLImp : IBL
     {
         public IRepository IRepository { get; set; }
@@ -111,21 +113,46 @@ namespace BL
 
 
         #region Machtes
+
         List<Volunteer> FindClosetVolunteers(Address address)
         {
-            List<Volunteer> result = new List<Volunteer>();
-            Func<Volunteer, bool> predicate = null;
-            result = GetAllVolunteers(predicate);
-            return result;
-        }
-        int FindClosetAdmin()
+            List<Volunteer> result = new List<Volunteer>();       
+            // return a list of all volunteers at teenager's city.
+            result = GetAllVolunteers(a => a.Address.City == address.City);     
+            return result; 
+        }‏
+
+
+         public int GetCEOAdmin()
         {
-            int adminId = 0; // To Do אולי לפי מיקום
-            // להתחבר לנתונים להוציא עם הפונקציה של קבלת אדמין את כל האדמינים באזור של המנטור ואז מתוכם לבחור את באדמין עם הכי פחות מנטורים ומתנדבים
-            return adminId;
+            List<Admin> CEO = GetAllAdmins(a => a.IsCEO == true);
+            try{
+                return CEO.ElementAt(0).AdminId;
+            }
+            catch(Exception){
+                throw new NoCEOException("CEO not exist");
+            }
         }
 
-        #endregion
-    }
+        int FindClosetAdmin(Areas area)
+        {
+            List<Admin> result = new List<Admin>(); 
+            // get the admin(s) at the given area.
+            result = GetAllAdmins(a => a.Area == area);
+            int adminId = GetCEOAdmin(); // might throw an "NoCEOException" exception
+            double minVal = double.PositiveInfinity;
+            int count;  
+            foreach (var admin in result) {
+                if ((count = admin.Volunteers.Count + admin.Mentors.Count) < minVal){//that admin has less volunteers
+                    minVal = count;
+                    adminId = admin.AdminId;
+                }       // To Do אולי לפי מיקום     // להתחבר לנתונים להוציא עם הפונקציה של קבלת אדמין את כל האדמינים באזור של המנטור ואז מתוכם לבחור את באדמין עם הכי פחות מנטורים ומתנדבים     
+            }
+            return adminId;
+        }‏
 
-}
+
+            #endregion
+        }
+
+    }

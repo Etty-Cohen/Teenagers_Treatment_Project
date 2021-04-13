@@ -161,22 +161,6 @@ namespace DAL.Repositories
             return result;
         }
 
-       /* public List<Volunteer> GetAllVolunteersWithSelect(Func<Volunteer, bool> predicate = null)
-        {
-            List<Volunteer> result = new List<Volunteer>();
-            using (var context = new TreatmentContext())
-            {
-                if (predicate == null)
-                    result = context.Volunteers
-                        .Select(v =>  v.FirstName)
-                        .ToList();
-                else
-                {
-                    result = context.Volunteers.Include(v => v.FirstName).Include(Address).Include().Where(predicate).ToList();
-                }
-            }
-            return result;
-        }*/
 
         public List<Admin> GetAllAdmins(Func<Admin, bool> predicate = null)
         {
@@ -193,7 +177,7 @@ namespace DAL.Repositories
             return result;
         }
 
-        public List<Mentor> GetAllMentors(Func<Mentor, bool> predicate = null)
+    public List<Mentor> GetAllMentors(Func<Mentor, bool> predicate = null)
         {
             List<Mentor> result = new List<Mentor>();
             using (var context = new TreatmentContext())

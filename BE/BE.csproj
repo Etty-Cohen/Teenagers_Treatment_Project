@@ -62,6 +62,7 @@
     <Compile Include="Types\Areas.cs" />
     <Compile Include="Types\StatusTypes.cs" />
     <Compile Include="Types\TreatmentsTypes.cs" />
+    <Compile Include="Types\UserTypes.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Volunteer.cs" />
   </ItemGroup>

@@ -12,14 +12,16 @@ namespace BE
 
         public Areas Area { get; set; }
 
+        public bool IsCEO { get; set; }
+
         public virtual ICollection<Mentor> Mentors { get; set; }
 
         public virtual ICollection<Volunteer> Volunteers { get; set; }
 
-        public Admin(string idNumber, string firstName, string lastName, string phoneNumber, string mailAddress, Address address, string password):
+        public Admin(string idNumber, string firstName, string lastName, string phoneNumber, string mailAddress, Address address, string password, bool isCEO):
             base(idNumber, firstName, lastName, phoneNumber, mailAddress, address, password)
         {
-
+            IsCEO = isCEO;
             Volunteers = new HashSet<Volunteer>();
         }
         
