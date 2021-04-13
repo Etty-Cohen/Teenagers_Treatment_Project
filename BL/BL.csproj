@@ -54,7 +54,7 @@
     <Compile Include="BLImp.cs" />
     <Compile Include="Interfaces\IBL.cs" />
     <Compile Include="MyBL.cs" />
-    <Compile Include="Exceptions\NoCEOException.cs" />
+    <Compile Include="Exceptions\NoMainAdminException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

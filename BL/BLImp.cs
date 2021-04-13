@@ -22,60 +22,60 @@ namespace BL
 
 
         #region update db
-        void AddVolunteer(Volunteer volunteer)
+        public void AddVolunteer(Volunteer volunteer)
         {
             IRepository.AddVolunteer(volunteer);
         }
-        void RemoveVolunteer(Volunteer volunteer)
+        public void RemoveVolunteer(Volunteer volunteer)
         {
             IRepository.RemoveVolunteer(volunteer);
         }
 
-        void AddAdmin(Admin admin)
+        public void AddAdmin(Admin admin)
         {
             IRepository.AddAdmin(admin);
         }
-        void RemoveAdmin(Admin admin)
+        public void RemoveAdmin(Admin admin)
         {
             IRepository.RemoveAdmin(admin);
         }
 
-        void AddMentor(Mentor mentor)
+        public void AddMentor(Mentor mentor)
         {
             IRepository.AddMentor(mentor);
         }
 
-        void RemoveMentor(Mentor mentor)
+        public void RemoveMentor(Mentor mentor)
         {
             IRepository.RemoveMentor(mentor);
         }
 
-        void AddTeenager(Teenager teenager)
+        public void AddTeenager(Teenager teenager)
         {
             IRepository.AddTeenager(teenager);
         }
 
-        void RemoveTeenager(Teenager teenager)
+        public void RemoveTeenager(Teenager teenager)
         {
             IRepository.RemoveTeenager(teenager);
         }
 
-        void AddTreatment(Treatment treatment)
+        public void AddTreatment(Treatment treatment)
         {
             IRepository.AddTreatment(treatment);
         }
 
-        void UpdateTreatment(Treatment treatment)
+        public void UpdateTreatment(Treatment treatment)
         {
             IRepository.UpdateTreatment(treatment);
         }
 
-        void AddAppointment(Appointment appointment)
+        public void AddAppointment(Appointment appointment)
         {
             IRepository.AddAppointment(appointment);
         }
 
-        void UpdateAppointment(Appointment appointment)
+        public void UpdateAppointment(Appointment appointment)
         {
             IRepository.UpdateAppointment(appointment);
         }
@@ -84,29 +84,30 @@ namespace BL
 
 
         #region fetch from db
-        List<Volunteer> GetAllVolunteers(Func<Volunteer, bool> predicate = null)
+        public List<Volunteer> GetAllVolunteers(Func<Volunteer, bool> predicate = null)
         {
+            return IRepository.GetAllVolunteers(predicate);
+        }
+        public List<Admin> GetAllAdmins(Func<Admin, bool> predicate = null)
+        {
+            return IRepository.GetAllAdmins(predicate);
 
         }
-        List<Admin> GetAllAdmins(Func<Admin, bool> predicate = null)
+        public List<Mentor> GetAllMentors(Func<Mentor, bool> predicate = null)
         {
-
+            return IRepository.GetAllMentors(predicate);
         }
-        List<Mentor> GetAllMentors(Func<Mentor, bool> predicate = null)
+        public List<Teenager> GetAllTeenagers(Func<Teenager, bool> predicate = null)
         {
-
+            return IRepository.GetAllTeenagers(predicate);
         }
-        List<Teenager> GetAllTeenagers(Func<Teenager, bool> predicate = null)
+        public List<Treatment> GetAllTreatments(Func<Treatment, bool> predicate = null)
         {
-
+            return IRepository.GetAllTreatments(predicate);
         }
-        List<Treatment> GetAllTreatments(Func<Treatment, bool> predicate = null)
+        public List<Appointment> GetAllAppointments(Func<Appointment, bool> predicate = null)
         {
-
-        }
-        List<Appointment> GetAllAppointments(Func<Appointment, bool> predicate = null)
-        {
-
+            return IRepository.GetAllAppointments(predicate);
         }
 
         #endregion
@@ -114,7 +115,7 @@ namespace BL
 
         #region Machtes
 
-        List<Volunteer> FindClosetVolunteers(Address address)
+        public List<Volunteer> FindClosetVolunteers(Address address)
         {
             List<Volunteer> result = new List<Volunteer>();       
             // return a list of all volunteers at teenager's city.
@@ -122,37 +123,48 @@ namespace BL
             return result; 
         }‏
 
-
-         public int GetCEOAdmin()
+        /// <summary>
+        /// That function return the id of the main admin.
+        /// </summary>
+        /// <exception>Thrown when there is no main admin.</exception>
+        /// <returns></returns>
+         public int GetMainAdmin()
         {
-            List<Admin> CEO = GetAllAdmins(a => a.IsCEO == true);
+            List<Admin> Main = GetAllAdmins(a => a.IsMainAdmin == true);
             try{
-                return CEO.ElementAt(0).AdminId;
+                return Main.ElementAt(0).AdminId;
             }
             catch(Exception){
-                throw new NoCEOException("CEO not exist");
+                throw new NoMainAdminException("MainAdmin not exist");
             }
         }
 
-        int FindClosetAdmin(Areas area)
+        /// <summary>
+        /// That function is looking for the admin in the given area,
+        /// with the fewest volunteers & mentors.
+        /// if there are no admin to that area- return the main admin id
+        /// </summary>
+        /// <param name="area"></param>
+        /// <returns>adminId</returns>
+        public int FindClosetAdmin(Areas area)
         {
             List<Admin> result = new List<Admin>(); 
             // get the admin(s) at the given area.
             result = GetAllAdmins(a => a.Area == area);
-            int adminId = GetCEOAdmin(); // might throw an "NoCEOException" exception
+            int adminId = GetMainAdmin(); // might throw an "NoCEOException" exception
             double minVal = double.PositiveInfinity;
             int count;  
             foreach (var admin in result) {
                 if ((count = admin.Volunteers.Count + admin.Mentors.Count) < minVal){//that admin has less volunteers
                     minVal = count;
                     adminId = admin.AdminId;
-                }       // To Do אולי לפי מיקום     // להתחבר לנתונים להוציא עם הפונקציה של קבלת אדמין את כל האדמינים באזור של המנטור ואז מתוכם לבחור את באדמין עם הכי פחות מנטורים ומתנדבים     
+                }         
             }
             return adminId;
         }‏
 
 
-            #endregion
-        }
+        #endregion
+    }
 
     }

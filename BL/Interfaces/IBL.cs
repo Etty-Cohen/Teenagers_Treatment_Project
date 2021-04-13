@@ -7,6 +7,9 @@ using BE;
 
 namespace BL.Interfaces
 {
+    /// <summary>
+    /// All removes functions are not deleting all the historical data.
+    /// </summary>
     public interface IBL
     {
         void AddVolunteer(Volunteer person);
@@ -31,9 +34,9 @@ namespace BL.Interfaces
 
 
 
-        int GetCEOAdmin();
+        int GetMainAdmin();
 
         List<Volunteer> FindClosetVolunteers(Address address);
-        int FindClosetAdmin();
+        int FindClosetAdmin(Areas area);
     }
 }
