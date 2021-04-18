@@ -27,22 +27,21 @@ namespace DAL
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Mentor>()
-                .HasMany(m => m.Teenagers‏)
-                .WithOptional(t => t.Mentor)
-                .HasForeignKey(t => t.MentorId)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Mentor>()
-                .HasMany(m => m.Appointments)
-                .WithRequired(a => a.Mentor)
-                .HasForeignKey(a => a.MentorId)
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Admin>()
                 .HasMany(a => a.Mentors)
                 .WithRequired(m => m.Admin)
                 .HasForeignKey(m => m.AdminId)
+                .WillCascadeOnDelete(false); 
+
+            modelBuilder.Entity<Mentor>()
+               .HasMany(m => m.Teenagers‏)
+               .WithMany(t => t.Mentors);
+
+            modelBuilder.Entity<Mentor>()
+                .HasMany(m => m.Appointments)
+                .WithRequired(a => a.Mentor)
+                .HasForeignKey(a => a.MentorId)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Admin>()
@@ -69,6 +68,9 @@ namespace DAL
                 .WillCascadeOnDelete(false);
 
 
+
+            modelBuilder.Entity<Treatment>().Property(t => t.VolunteerId).IsOptional();
+            //modelBuilder.Entity<Mentor>().Property(t => t.Teenagers).IsOptional();
             // To Do
             //    modelBuilder.Entity<Package>().Property(p => p.RecipientId).IsOptional();
             //    modelBuilder.Entity<Distribution>().Property(p => p.AdminId).IsOptional();

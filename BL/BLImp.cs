@@ -119,8 +119,8 @@ namespace BL
         {
             List<Volunteer> result = new List<Volunteer>();       
             // return a list of all volunteers at teenager's city.
-            result = GetAllVolunteers(a => a.Address.City == address.City);     
-            return result; 
+            result = GetAllVolunteers(a => a.Address.City == address.City);
+            return result;
         }‏
 
         /// <summary>

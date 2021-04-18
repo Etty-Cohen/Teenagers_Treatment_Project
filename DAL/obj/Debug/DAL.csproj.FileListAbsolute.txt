@@ -16,3 +16,7 @@ C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.pdb
 C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.Migrations.initialModel.resources
 C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
 C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.Migrations.UpdateClassVolunteerTeenager.resources
+C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.Migrations.addRelationships.resources
+C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.Migrations.createTableAdminMentor.resources
+C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.Migrations.createTableMentorTeenagers.resources
+C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.Migrations.createTableMentorAppointments.resources

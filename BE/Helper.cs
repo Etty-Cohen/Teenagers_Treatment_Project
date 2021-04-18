@@ -8,9 +8,7 @@ namespace BE
 {
     public class Helper : User
     {
-        public int AdminId { get; set; }
-
-        public virtual Admin Admin { get; set; }
+        
 
         public Areas Area { get; set; }
 
@@ -20,7 +18,6 @@ namespace BE
             base(idNumber, firstName, lastName, phoneNumber, mailAddress, address, password)
         {
             Teenagers = new HashSet<Teenager>();
-            AdminId = adminId;
         }
 
     }

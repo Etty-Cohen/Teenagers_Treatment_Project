@@ -14,11 +14,16 @@ namespace BE
 
         public virtual ICollection<Appointment> Appointments { get; set; }
 
+        public int AdminId { get; set; }
+
+        public virtual Admin Admin { get; set; }
+
 
         public Mentor(string idNumber, string firstName, string lastName, string phoneNumber, string mailAddress, Address address, string password, int adminId) :
             base(idNumber, firstName, lastName, phoneNumber, mailAddress, address, password, adminId)
         {
             Appointments = new HashSet<Appointment>();
+            AdminId = adminId;
         }
 
 

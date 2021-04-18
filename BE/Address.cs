@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-    public class Address     /*add/*
+    public class Address     /*add*/
     {
 
         public string City { get; set; }
@@ -14,6 +14,7 @@ namespace BE
         public Areas Area { get; set; }
 
         public string Street { get; set; }
+
         public int BuildingNumber { get; set; }
     
 
