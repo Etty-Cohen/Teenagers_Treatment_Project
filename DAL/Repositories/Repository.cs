@@ -11,6 +11,7 @@ namespace DAL.Repositories
     {
 
         #region update db
+        //To Do עדכון פרטים של הישויות במערכת 
         public void AddVolunteer(Volunteer volunteer)
         {
             using (var ctx = new TreatmentContext())
