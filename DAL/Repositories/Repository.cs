@@ -11,7 +11,7 @@ namespace DAL.Repositories
     {
 
         #region update db
-        //To Do עדכון פרטים של הישויות במערכת 
+
         public void AddVolunteer(Volunteer volunteer)
         {
             using (var ctx = new TreatmentContext())
@@ -29,6 +29,25 @@ namespace DAL.Repositories
                 old.IsActive = false;
                 ctx.SaveChanges();
             }
+        }
+
+        public void UpdateVolunteer(Volunteer volunteer)
+        {
+            using (var context = new TreatmentContext())
+            {
+                var old = context.Volunteers.Find(volunteer.VolunteerId);
+                old.IdNumber = volunteer.IdNumber;
+                old.FirstName = volunteer.FirstName;
+                old.LastName = volunteer.LastName;
+                old.PhoneNumber = volunteer.PhoneNumber;
+                old.MailAddress = volunteer.MailAddress;
+                old.Address = volunteer.Address;
+                old.Password = volunteer.Password;
+                old.IsActive = volunteer.IsActive;
+                old.Area = volunteer.Area;
+                context.SaveChanges();
+            }
+
         }
 
         public void AddAdmin(Admin admin)
@@ -50,6 +69,26 @@ namespace DAL.Repositories
             }
         }
 
+        public void UpdateAdmin(Admin admin)
+        {
+            using (var context = new TreatmentContext())
+            {
+                var old = context.Admins.Find(admin.AdminId);
+                old.IdNumber = admin.IdNumber;
+                old.FirstName = admin.FirstName;
+                old.LastName = admin.LastName;
+                old.PhoneNumber = admin.PhoneNumber;
+                old.MailAddress = admin.MailAddress;
+                old.Address = admin.Address;
+                old.Password = admin.Password;
+                old.IsActive = admin.IsActive;
+                old.Area = admin.Area;
+                old.IsMainAdmin = admin.IsMainAdmin;
+                context.SaveChanges();
+            }
+
+        }
+
         public void AddMentor(Mentor mentor)
         {
             using (var ctx = new TreatmentContext())
@@ -69,6 +108,25 @@ namespace DAL.Repositories
             }
         }
 
+
+        public void UpdateMentor(Mentor mentor)
+        {
+            using (var context = new TreatmentContext())
+            {
+                var old = context.Mentors.Find(mentor.MentorId);
+                old.IdNumber = mentor.IdNumber;
+                old.FirstName = mentor.FirstName;
+                old.LastName = mentor.LastName;
+                old.PhoneNumber = mentor.PhoneNumber;
+                old.MailAddress = mentor.MailAddress;
+                old.Address = mentor.Address;
+                old.Password = mentor.Password;
+                old.IsActive = mentor.IsActive;
+                old.Area = mentor.Area;
+                context.SaveChanges();
+            }
+
+        }
         public void AddTeenager(Teenager teenager)
         {
             using (var ctx = new TreatmentContext())
@@ -86,6 +144,24 @@ namespace DAL.Repositories
                 old.IsActive = false;
                 ctx.SaveChanges();
             }
+        }
+
+        public void UpdateTeenager(Teenager teenager)
+        {
+            using (var context = new TreatmentContext())
+            {
+                var old = context.Teenagers.Find(teenager.TeenagerId);
+                old.IdNumber = teenager.IdNumber;
+                old.FirstName = teenager.FirstName;
+                old.LastName = teenager.LastName;
+                old.PhoneNumber = teenager.PhoneNumber;
+                old.MailAddress = teenager.MailAddress;
+                old.Address = teenager.Address;
+                old.Password = teenager.Password;
+                old.IsActive = teenager.IsActive;
+                context.SaveChanges();
+            }
+
         }
 
         public void AddTreatment(Treatment treatment)
@@ -113,6 +189,7 @@ namespace DAL.Repositories
                 context.SaveChanges();
             }
         }
+
 
         public void AddAppointment(Appointment appointment)
         {
@@ -144,6 +221,7 @@ namespace DAL.Repositories
         #region fetch from db
         public List<Volunteer> GetAllVolunteers(Func<Volunteer, bool> predicate = null)
         {
+
             List<Volunteer> result = new List<Volunteer>();
             using (var context = new TreatmentContext())
             {

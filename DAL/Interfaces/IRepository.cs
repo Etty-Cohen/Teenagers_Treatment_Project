@@ -11,12 +11,16 @@ namespace DAL.Interfaces
     {
         void AddVolunteer(Volunteer person);
         void RemoveVolunteer(Volunteer person);
+        void UpdateVolunteer(Volunteer person);
         void AddAdmin(Admin person);
         void RemoveAdmin(Admin person);
+        void UpdateAdmin(Admin person);
         void AddMentor(Mentor person);
         void RemoveMentor(Mentor person);
+        void UpdateMentor(Mentor person);
         void AddTeenager(Teenager person);
         void RemoveTeenager(Teenager person);
+        void UpdateTeenager(Teenager person);
         void AddTreatment(Treatment treatment);
         void UpdateTreatment(Treatment treatment);
         void AddAppointment(Appointment appointment);

@@ -78,6 +78,14 @@
     <Compile Include="Migrations\202104181907356_createTableMentorAppointments.designer.cs">
       <DependentUpon>202104181907356_createTableMentorAppointments.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104221921450_CreateVolunteerRequestsTable.cs" />
+    <Compile Include="Migrations\202104221921450_CreateVolunteerRequestsTable.designer.cs">
+      <DependentUpon>202104221921450_CreateVolunteerRequestsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104221948292_CreateRecommenderTable.cs" />
+    <Compile Include="Migrations\202104221948292_CreateRecommenderTable.designer.cs">
+      <DependentUpon>202104221948292_CreateRecommenderTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Repository.cs" />
@@ -114,6 +122,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104181907356_createTableMentorAppointments.resx">
       <DependentUpon>202104181907356_createTableMentorAppointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104221921450_CreateVolunteerRequestsTable.resx">
+      <DependentUpon>202104221921450_CreateVolunteerRequestsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104221948292_CreateRecommenderTable.resx">
+      <DependentUpon>202104221948292_CreateRecommenderTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

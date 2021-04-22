@@ -31,6 +31,11 @@ namespace BL
             IRepository.RemoveVolunteer(volunteer);
         }
 
+        public void UpdateVolunteer(Volunteer volunteer)
+        {
+            IRepository.UpdateVolunteer(volunteer);
+        }
+
         public void AddAdmin(Admin admin)
         {
             IRepository.AddAdmin(admin);
@@ -38,6 +43,10 @@ namespace BL
         public void RemoveAdmin(Admin admin)
         {
             IRepository.RemoveAdmin(admin);
+        }
+        public void UpdateAdmin(Admin admin)
+        {
+            IRepository.UpdateAdmin(admin);
         }
 
         public void AddMentor(Mentor mentor)
@@ -49,7 +58,10 @@ namespace BL
         {
             IRepository.RemoveMentor(mentor);
         }
-
+        public void UpdateMentor(Mentor mentor)
+        {
+            IRepository.UpdateMentor(mentor);
+        }
         public void AddTeenager(Teenager teenager)
         {
             IRepository.AddTeenager(teenager);
@@ -59,6 +71,11 @@ namespace BL
         {
             IRepository.RemoveTeenager(teenager);
         }
+        public void UpdateTeenager(Teenager teenager)
+        {
+            IRepository.UpdateTeenager(teenager);
+        }
+
 
         public void AddTreatment(Treatment treatment)
         {
@@ -122,7 +139,7 @@ namespace BL
             result = GetAllVolunteers(a => a.Address.City == address.City);
             return result;
         }‏
-
+        
         /// <summary>
         /// That function return the id of the main admin.
         /// </summary>

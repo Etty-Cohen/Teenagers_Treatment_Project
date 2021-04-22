@@ -20,3 +20,5 @@ C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.Migrations.addRelationships.res
 C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.Migrations.createTableAdminMentor.resources
 C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.Migrations.createTableMentorTeenagers.resources
 C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.Migrations.createTableMentorAppointments.resources
+C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.Migrations.CreateVolunteerRequestsTable.resources
+C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.Migrations.CreateRecommenderTable.resources

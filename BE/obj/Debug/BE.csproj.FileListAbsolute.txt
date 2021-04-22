@@ -10,10 +10,6 @@ C:\Users\etty2\Desktop\האוניברסיטה הפתוחה\2021\סדנה\פרו�
 C:\Users\etty2\Desktop\האוניברסיטה הפתוחה\2021\סדנה\פרויקט מורי דרך בהצלחה\project\BE\obj\Debug\BE.csproj.CopyComplete
 C:\Users\etty2\Desktop\האוניברסיטה הפתוחה\2021\סדנה\פרויקט מורי דרך בהצלחה\project\BE\obj\Debug\BE.dll
 C:\Users\etty2\Desktop\האוניברסיטה הפתוחה\2021\סדנה\פרויקט מורי דרך בהצלחה\project\BE\obj\Debug\BE.pdb
-C:\Users\etty2\Desktop\project\BE\obj\Debug\BE.csprojAssemblyReference.cache
-C:\Users\etty2\Desktop\project\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
-C:\Users\etty2\Desktop\project\BE\obj\Debug\BE.dll
-C:\Users\etty2\Desktop\project\BE\obj\Debug\BE.pdb
 C:\Users\etty2\Desktop\project\BE\bin\Debug\BE.dll.config
 C:\Users\etty2\Desktop\project\BE\bin\Debug\BE.dll
 C:\Users\etty2\Desktop\project\BE\bin\Debug\BE.pdb
@@ -21,4 +17,8 @@ C:\Users\etty2\Desktop\project\BE\bin\Debug\EntityFramework.dll
 C:\Users\etty2\Desktop\project\BE\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\etty2\Desktop\project\BE\bin\Debug\EntityFramework.xml
 C:\Users\etty2\Desktop\project\BE\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\etty2\Desktop\project\BE\obj\Debug\BE.csprojAssemblyReference.cache
+C:\Users\etty2\Desktop\project\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
 C:\Users\etty2\Desktop\project\BE\obj\Debug\BE.csproj.CopyComplete
+C:\Users\etty2\Desktop\project\BE\obj\Debug\BE.dll
+C:\Users\etty2\Desktop\project\BE\obj\Debug\BE.pdb
