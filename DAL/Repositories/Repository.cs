@@ -25,8 +25,7 @@ namespace DAL.Repositories
         {
             using (var ctx = new TreatmentContext())
             {
-                var old = ctx.Volunteers.Find(volunteer.VolunteerId);
-                old.IsActive = false;
+                ctx.Volunteers.Remove(volunteer);
                 ctx.SaveChanges();
             }
         }
@@ -43,7 +42,6 @@ namespace DAL.Repositories
                 old.MailAddress = volunteer.MailAddress;
                 old.Address = volunteer.Address;
                 old.Password = volunteer.Password;
-                old.IsActive = volunteer.IsActive;
                 old.Area = volunteer.Area;
                 context.SaveChanges();
             }
@@ -63,8 +61,7 @@ namespace DAL.Repositories
         {
             using (var ctx = new TreatmentContext())
             {
-                var old = ctx.Admins.Find(admin.AdminId);
-                old.IsActive = false;
+                ctx.Admins.Remove(admin);
                 ctx.SaveChanges();
             }
         }
@@ -81,7 +78,6 @@ namespace DAL.Repositories
                 old.MailAddress = admin.MailAddress;
                 old.Address = admin.Address;
                 old.Password = admin.Password;
-                old.IsActive = admin.IsActive;
                 old.Area = admin.Area;
                 old.IsMainAdmin = admin.IsMainAdmin;
                 context.SaveChanges();
@@ -102,8 +98,7 @@ namespace DAL.Repositories
         {
             using (var ctx = new TreatmentContext())
             {
-                var old = ctx.Mentors.Find(mentor.MentorId);
-                old.IsActive = false;
+                ctx.Mentors.Find(mentor);
                 ctx.SaveChanges();
             }
         }
@@ -121,7 +116,6 @@ namespace DAL.Repositories
                 old.MailAddress = mentor.MailAddress;
                 old.Address = mentor.Address;
                 old.Password = mentor.Password;
-                old.IsActive = mentor.IsActive;
                 old.Area = mentor.Area;
                 context.SaveChanges();
             }
@@ -140,8 +134,7 @@ namespace DAL.Repositories
         {
             using (var ctx = new TreatmentContext())
             {
-                var old = ctx.Teenagers.Find(teenager.TeenagerId);
-                old.IsActive = false;
+                ctx.Teenagers.Remove(teenager);
                 ctx.SaveChanges();
             }
         }
@@ -158,7 +151,6 @@ namespace DAL.Repositories
                 old.MailAddress = teenager.MailAddress;
                 old.Address = teenager.Address;
                 old.Password = teenager.Password;
-                old.IsActive = teenager.IsActive;
                 context.SaveChanges();
             }
 
