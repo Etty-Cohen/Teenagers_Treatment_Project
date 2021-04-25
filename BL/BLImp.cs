@@ -11,7 +11,7 @@ using DAL.Repositories;
 namespace BL
 {
 
-    class BLImp : IBL
+    public class BLImp : IBL
     {
         public IRepository IRepository { get; set; }
 
@@ -134,12 +134,12 @@ namespace BL
 
         public List<Volunteer> FindClosetVolunteers(Address address)
         {
-            List<Volunteer> result = new List<Volunteer>();       
+            List<Volunteer> result = new List<Volunteer>();
             // return a list of all volunteers at teenager's city.
             result = GetAllVolunteers(a => a.Address.City == address.City);
             return result;
-        }‏
-        
+        }
+
         /// <summary>
         /// That function return the id of the main admin.
         /// </summary>
@@ -165,20 +165,23 @@ namespace BL
         /// <returns>adminId</returns>
         public int FindClosetAdmin(Areas area)
         {
-            List<Admin> result = new List<Admin>(); 
+            List<Admin> result = new List<Admin>();
             // get the admin(s) at the given area.
             result = GetAllAdmins(a => a.Area == area);
             int adminId = GetMainAdmin(); // might throw an "NoCEOException" exception
             double minVal = double.PositiveInfinity;
-            int count;  
-            foreach (var admin in result) {
-                if ((count = admin.Volunteers.Count + admin.Mentors.Count) < minVal){//that admin has less volunteers
+            int count;
+            foreach (var admin in result)
+            {
+                if ((count = admin.Volunteers.Count + admin.Mentors.Count) < minVal)
+                {//that admin has less volunteers
                     minVal = count;
                     adminId = admin.AdminId;
-                }         
+                }
             }
             return adminId;
-        }‏
+
+        }
 
 
         #endregion

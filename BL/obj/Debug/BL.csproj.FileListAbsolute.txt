@@ -13,3 +13,6 @@ C:\Users\etty2\Desktop\project\BL\bin\Debug\EntityFramework.xml
 C:\Users\etty2\Desktop\project\BL\obj\Debug\BL.csproj.CopyComplete
 C:\Users\etty2\Desktop\project\BL\obj\Debug\BL.dll
 C:\Users\etty2\Desktop\project\BL\obj\Debug\BL.pdb
+C:\Users\etty2\Desktop\project\BL\bin\Debug\BL.dll.config
+C:\Users\etty2\Desktop\project\BL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\etty2\Desktop\project\BL\bin\Debug\EntityFramework.SqlServer.xml
