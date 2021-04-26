@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-    public class Address     /*add*/
+    public class Address 
     {
 
         public string City { get; set; }

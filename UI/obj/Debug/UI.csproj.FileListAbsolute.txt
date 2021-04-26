@@ -77,3 +77,11 @@ C:\Users\etty2\Desktop\project\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
 C:\Users\etty2\Desktop\project\UI\obj\Debug\UI.csproj.CopyComplete
 C:\Users\etty2\Desktop\project\UI\obj\Debug\UI.dll
 C:\Users\etty2\Desktop\project\UI\obj\Debug\UI.pdb
+C:\Users\etty2\Desktop\project\UI\bin\System.Configuration.ConfigurationManager.dll
+C:\Users\etty2\Desktop\project\UI\bin\System.Security.AccessControl.dll
+C:\Users\etty2\Desktop\project\UI\bin\System.Security.Permissions.dll
+C:\Users\etty2\Desktop\project\UI\bin\System.Security.Principal.Windows.dll
+C:\Users\etty2\Desktop\project\UI\bin\System.Configuration.ConfigurationManager.xml
+C:\Users\etty2\Desktop\project\UI\bin\System.Security.AccessControl.xml
+C:\Users\etty2\Desktop\project\UI\bin\System.Security.Permissions.xml
+C:\Users\etty2\Desktop\project\UI\bin\System.Security.Principal.Windows.xml

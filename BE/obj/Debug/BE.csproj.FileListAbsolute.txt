@@ -22,3 +22,13 @@ C:\Users\etty2\Desktop\project\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
 C:\Users\etty2\Desktop\project\BE\obj\Debug\BE.csproj.CopyComplete
 C:\Users\etty2\Desktop\project\BE\obj\Debug\BE.dll
 C:\Users\etty2\Desktop\project\BE\obj\Debug\BE.pdb
+C:\Users\etty2\Desktop\project\BE\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\etty2\Desktop\project\BE\bin\Debug\System.Security.AccessControl.dll
+C:\Users\etty2\Desktop\project\BE\bin\Debug\System.Security.Permissions.dll
+C:\Users\etty2\Desktop\project\BE\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\etty2\Desktop\project\BE\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\etty2\Desktop\project\BE\bin\Debug\System.Security.AccessControl.xml
+C:\Users\etty2\Desktop\project\BE\bin\Debug\System.Security.Permissions.xml
+C:\Users\etty2\Desktop\project\BE\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\etty2\Desktop\project\BE\bin\Debug\System.Data.SqlClient.dll
+C:\Users\etty2\Desktop\project\BE\bin\Debug\System.Data.SqlClient.xml

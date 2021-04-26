@@ -1,0 +1,132 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\etty2\\Desktop\\project\\Testers\\Testers.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\etty2\\Desktop\\project\\BE\\BE.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\etty2\\Desktop\\project\\BE\\BE.csproj",
+        "projectName": "BE",
+        "projectPath": "C:\\Users\\etty2\\Desktop\\project\\BE\\BE.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\etty2\\Desktop\\project\\BL\\BL.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\etty2\\Desktop\\project\\BL\\BL.csproj",
+        "projectName": "BL",
+        "projectPath": "C:\\Users\\etty2\\Desktop\\project\\BL\\BL.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\etty2\\Desktop\\project\\BE\\BE.csproj": {
+                "projectPath": "C:\\Users\\etty2\\Desktop\\project\\BE\\BE.csproj"
+              },
+              "C:\\Users\\etty2\\Desktop\\project\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\etty2\\Desktop\\project\\DAL\\DAL.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\etty2\\Desktop\\project\\DAL\\DAL.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\etty2\\Desktop\\project\\DAL\\DAL.csproj",
+        "projectName": "DAL",
+        "projectPath": "C:\\Users\\etty2\\Desktop\\project\\DAL\\DAL.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\etty2\\Desktop\\project\\BE\\BE.csproj": {
+                "projectPath": "C:\\Users\\etty2\\Desktop\\project\\BE\\BE.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\etty2\\Desktop\\project\\Testers\\Testers.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\etty2\\Desktop\\project\\Testers\\Testers.csproj",
+        "projectName": "Testers",
+        "projectPath": "C:\\Users\\etty2\\Desktop\\project\\Testers\\Testers.csproj",
+        "packagesPath": "C:\\Users\\etty2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\etty2\\Desktop\\project\\Testers\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\etty2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\etty2\\Desktop\\project\\BE\\BE.csproj": {
+                "projectPath": "C:\\Users\\etty2\\Desktop\\project\\BE\\BE.csproj"
+              },
+              "C:\\Users\\etty2\\Desktop\\project\\BL\\BL.csproj": {
+                "projectPath": "C:\\Users\\etty2\\Desktop\\project\\BL\\BL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

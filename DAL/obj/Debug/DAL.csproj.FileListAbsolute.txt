@@ -22,3 +22,13 @@ C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.Migrations.createTableMentorTee
 C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.Migrations.createTableMentorAppointments.resources
 C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.Migrations.CreateVolunteerRequestsTable.resources
 C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.Migrations.CreateRecommenderTable.resources
+C:\Users\etty2\Desktop\project\DAL\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\etty2\Desktop\project\DAL\bin\Debug\System.Security.AccessControl.dll
+C:\Users\etty2\Desktop\project\DAL\bin\Debug\System.Security.Permissions.dll
+C:\Users\etty2\Desktop\project\DAL\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\etty2\Desktop\project\DAL\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\etty2\Desktop\project\DAL\bin\Debug\System.Security.AccessControl.xml
+C:\Users\etty2\Desktop\project\DAL\bin\Debug\System.Security.Permissions.xml
+C:\Users\etty2\Desktop\project\DAL\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\etty2\Desktop\project\DAL\bin\Debug\System.Data.SqlClient.dll
+C:\Users\etty2\Desktop\project\DAL\bin\Debug\System.Data.SqlClient.xml

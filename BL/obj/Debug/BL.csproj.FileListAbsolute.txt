@@ -16,3 +16,13 @@ C:\Users\etty2\Desktop\project\BL\obj\Debug\BL.pdb
 C:\Users\etty2\Desktop\project\BL\bin\Debug\BL.dll.config
 C:\Users\etty2\Desktop\project\BL\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\etty2\Desktop\project\BL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\etty2\Desktop\project\BL\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\etty2\Desktop\project\BL\bin\Debug\System.Security.AccessControl.dll
+C:\Users\etty2\Desktop\project\BL\bin\Debug\System.Security.Permissions.dll
+C:\Users\etty2\Desktop\project\BL\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\etty2\Desktop\project\BL\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\etty2\Desktop\project\BL\bin\Debug\System.Security.AccessControl.xml
+C:\Users\etty2\Desktop\project\BL\bin\Debug\System.Security.Permissions.xml
+C:\Users\etty2\Desktop\project\BL\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\etty2\Desktop\project\BL\bin\Debug\System.Data.SqlClient.dll
+C:\Users\etty2\Desktop\project\BL\bin\Debug\System.Data.SqlClient.xml
