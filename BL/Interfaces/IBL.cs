@@ -29,6 +29,12 @@ namespace BL.Interfaces
         void AddAppointment(Appointment appointment);
         void UpdateAppointment(Appointment appointment);
 
+
+        bool ChangePhoneNumber(String phoneNumber);
+        bool ChangeAddress(Address Address);
+        bool ChangePassword(String password);
+        
+
         List<Volunteer> GetAllVolunteers(Func<Volunteer, bool> predicate = null);
         List<Admin> GetAllAdmins(Func<Admin, bool> predicate = null);
         List<Mentor> GetAllMentors(Func<Mentor, bool> predicate = null);

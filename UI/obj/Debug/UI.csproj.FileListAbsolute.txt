@@ -85,3 +85,9 @@ C:\Users\etty2\Desktop\project\UI\bin\System.Configuration.ConfigurationManager.
 C:\Users\etty2\Desktop\project\UI\bin\System.Security.AccessControl.xml
 C:\Users\etty2\Desktop\project\UI\bin\System.Security.Permissions.xml
 C:\Users\etty2\Desktop\project\UI\bin\System.Security.Principal.Windows.xml
+C:\Users\etty2\Desktop\project\UI\bin\EntityFramework.dll
+C:\Users\etty2\Desktop\project\UI\bin\EntityFramework.SqlServer.dll
+C:\Users\etty2\Desktop\project\UI\bin\System.Data.SqlClient.dll
+C:\Users\etty2\Desktop\project\UI\bin\EntityFramework.xml
+C:\Users\etty2\Desktop\project\UI\bin\EntityFramework.SqlServer.xml
+C:\Users\etty2\Desktop\project\UI\bin\System.Data.SqlClient.xml

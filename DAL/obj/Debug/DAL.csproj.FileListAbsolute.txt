@@ -32,3 +32,4 @@ C:\Users\etty2\Desktop\project\DAL\bin\Debug\System.Security.Permissions.xml
 C:\Users\etty2\Desktop\project\DAL\bin\Debug\System.Security.Principal.Windows.xml
 C:\Users\etty2\Desktop\project\DAL\bin\Debug\System.Data.SqlClient.dll
 C:\Users\etty2\Desktop\project\DAL\bin\Debug\System.Data.SqlClient.xml
+C:\Users\etty2\Desktop\project\DAL\obj\Debug\DAL.Migrations.finalModel.resources

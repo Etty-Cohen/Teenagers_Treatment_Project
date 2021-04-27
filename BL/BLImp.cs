@@ -97,6 +97,11 @@ namespace BL
             IRepository.UpdateAppointment(appointment);
         }
 
+        //To Do
+        public bool ChangePhoneNumber(String phoneNumber) { return true; }
+        public bool ChangeAddress(Address Address) { return true; }
+        public bool ChangePassword(String password) { return true; }
+
         #endregion
 
 

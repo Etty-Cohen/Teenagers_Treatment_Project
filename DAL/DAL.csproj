@@ -108,6 +108,10 @@
     <Compile Include="Migrations\202104221948292_CreateRecommenderTable.designer.cs">
       <DependentUpon>202104221948292_CreateRecommenderTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104272025387_finalModel.cs" />
+    <Compile Include="Migrations\202104272025387_finalModel.designer.cs">
+      <DependentUpon>202104272025387_finalModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Repository.cs" />
@@ -150,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104221948292_CreateRecommenderTable.resx">
       <DependentUpon>202104221948292_CreateRecommenderTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104272025387_finalModel.resx">
+      <DependentUpon>202104272025387_finalModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
