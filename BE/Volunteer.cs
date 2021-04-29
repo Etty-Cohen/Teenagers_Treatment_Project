@@ -18,12 +18,14 @@ namespace BE
 
         public virtual Admin Admin { get; set; }
 
-        public Volunteer(string idNumber, string firstName, string lastName, string phoneNumber, string mailAddress, Address address, string password, int adminId) :
-            base(idNumber, firstName, lastName, phoneNumber, mailAddress, address, password, adminId)
+        public Volunteer(string firstName, string lastName, string phoneNumber, string mailAddress, Address address, string password, int adminId) :
+            base(firstName, lastName, phoneNumber, mailAddress, address, password, adminId)
         {
             Treatments = new HashSet<Treatment>();
             AdminId = adminId;
         }
+
+        public Volunteer() { }
 
 
 

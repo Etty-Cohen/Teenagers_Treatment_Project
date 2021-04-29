@@ -38,5 +38,7 @@ namespace BE
             Status = StatusTypes.OPENED;
         }
 
+        public Treatment() { }
+
     }
 }

@@ -21,8 +21,8 @@ namespace BE
 
 
 
-        public Teenager(string idNumber, string firstName, string lastName, string phoneNumber, string mailAddress, Address address, string password) :
-            base(idNumber, firstName, lastName, phoneNumber, mailAddress, address, password)
+        public Teenager(string firstName, string lastName, string phoneNumber, string mailAddress, Address address, string password) :
+            base(firstName, lastName, phoneNumber, mailAddress, address, password)
         {
 
             Volunteers = new HashSet<Volunteer>();
@@ -30,6 +30,8 @@ namespace BE
             Treatments = new HashSet<Treatment>();
             Appointments = new HashSet<Appointment>();
         }
+
+        public Teenager() { }
 
 
 

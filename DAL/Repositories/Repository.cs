@@ -35,7 +35,6 @@ namespace DAL.Repositories
             using (var context = new TreatmentContext())
             {
                 var old = context.Volunteers.Find(volunteer.VolunteerId);
-                old.IdNumber = volunteer.IdNumber;
                 old.FirstName = volunteer.FirstName;
                 old.LastName = volunteer.LastName;
                 old.PhoneNumber = volunteer.PhoneNumber;
@@ -71,7 +70,6 @@ namespace DAL.Repositories
             using (var context = new TreatmentContext())
             {
                 var old = context.Admins.Find(admin.AdminId);
-                old.IdNumber = admin.IdNumber;
                 old.FirstName = admin.FirstName;
                 old.LastName = admin.LastName;
                 old.PhoneNumber = admin.PhoneNumber;
@@ -109,7 +107,6 @@ namespace DAL.Repositories
             using (var context = new TreatmentContext())
             {
                 var old = context.Mentors.Find(mentor.MentorId);
-                old.IdNumber = mentor.IdNumber;
                 old.FirstName = mentor.FirstName;
                 old.LastName = mentor.LastName;
                 old.PhoneNumber = mentor.PhoneNumber;
@@ -144,7 +141,6 @@ namespace DAL.Repositories
             using (var context = new TreatmentContext())
             {
                 var old = context.Teenagers.Find(teenager.TeenagerId);
-                old.IdNumber = teenager.IdNumber;
                 old.FirstName = teenager.FirstName;
                 old.LastName = teenager.LastName;
                 old.PhoneNumber = teenager.PhoneNumber;

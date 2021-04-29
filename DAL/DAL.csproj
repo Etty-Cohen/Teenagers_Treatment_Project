@@ -112,6 +112,10 @@
     <Compile Include="Migrations\202104272025387_finalModel.designer.cs">
       <DependentUpon>202104272025387_finalModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104290531230_deleteIdNumberFromUser.cs" />
+    <Compile Include="Migrations\202104290531230_deleteIdNumberFromUser.designer.cs">
+      <DependentUpon>202104290531230_deleteIdNumberFromUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Repository.cs" />
@@ -157,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104272025387_finalModel.resx">
       <DependentUpon>202104272025387_finalModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104290531230_deleteIdNumberFromUser.resx">
+      <DependentUpon>202104290531230_deleteIdNumberFromUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

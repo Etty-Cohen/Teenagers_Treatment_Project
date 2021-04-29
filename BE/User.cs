@@ -8,7 +8,6 @@ namespace BE
 {
     public class User
     {
-        public string IdNumber { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
@@ -16,9 +15,8 @@ namespace BE
         public Address Address { get; set; }
         public string Password { get; set; }
 
-        public User(string idNumber, string firstName, string lastName, string phoneNumber, string mailAddress, Address address, string password)
+        public User(string firstName, string lastName, string phoneNumber, string mailAddress, Address address, string password)
         {
-            IdNumber = idNumber;
             FirstName = firstName;
             LastName = lastName;
             PhoneNumber = phoneNumber;
@@ -26,6 +24,8 @@ namespace BE
             Address = address;
             Password = password;
         }
+
+        public User() { }
 
         public Address GetAddress()
         {

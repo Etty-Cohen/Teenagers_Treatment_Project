@@ -16,7 +16,7 @@ namespace BE
         public string Street { get; set; }
 
         public int BuildingNumber { get; set; }
-    
+
 
         public Address(string City, Areas Area, string Street, int BuildingNumber)
         {
@@ -33,6 +33,8 @@ namespace BE
             Street = address.Street;
             BuildingNumber = address.BuildingNumber;
         }
+
+        public Address(){}
 
         public override string ToString()
         {

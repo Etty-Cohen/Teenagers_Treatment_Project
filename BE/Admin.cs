@@ -20,14 +20,16 @@ namespace BE
 
         public virtual ICollection<VolunteerRequest> VolunteerRequests { get; set; }
 
-        public Admin(string idNumber, string firstName, string lastName, string phoneNumber, string mailAddress, Address address, string password, bool isMainAdmin) :
-            base(idNumber, firstName, lastName, phoneNumber, mailAddress, address, password)
+        public Admin(string firstName, string lastName, string phoneNumber, string mailAddress, Address address, string password, bool isMainAdmin) :
+            base(firstName, lastName, phoneNumber, mailAddress, address, password)
         {
             IsMainAdmin = isMainAdmin;
             Volunteers = new HashSet<Volunteer>();
             Mentors = new HashSet<Mentor>();
             VolunteerRequests = new HashSet<VolunteerRequest>();
         }
+
+        public Admin() { }
 
     }
 }
