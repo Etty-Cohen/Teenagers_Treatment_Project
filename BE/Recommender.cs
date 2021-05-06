@@ -20,7 +20,7 @@ namespace BE
 
         public string Relationship { get; set; }
 
-        public VolunteerRequest VolunteerRequest { get; set; }
+        public virtual VolunteerRequest VolunteerRequest { get; set; }
 
         public int VolunteerRequestId { get; set; }
 

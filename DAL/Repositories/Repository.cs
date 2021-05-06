@@ -25,6 +25,7 @@ namespace DAL.Repositories
         {
             using (var ctx = new TreatmentContext())
             {
+                ctx.Volunteers.Attach(volunteer);
                 ctx.Volunteers.Remove(volunteer);
                 ctx.SaveChanges();
             }
@@ -60,6 +61,7 @@ namespace DAL.Repositories
         {
             using (var ctx = new TreatmentContext())
             {
+                ctx.Admins.Attach(admin);
                 ctx.Admins.Remove(admin);
                 ctx.SaveChanges();
             }
@@ -96,6 +98,7 @@ namespace DAL.Repositories
         {
             using (var ctx = new TreatmentContext())
             {
+                ctx.Mentors.Attach(mentor);
                 ctx.Mentors.Find(mentor);
                 ctx.SaveChanges();
             }
@@ -131,6 +134,7 @@ namespace DAL.Repositories
         {
             using (var ctx = new TreatmentContext())
             {
+                ctx.Teenagers.Attach(teenager);
                 ctx.Teenagers.Remove(teenager);
                 ctx.SaveChanges();
             }

@@ -116,6 +116,14 @@
     <Compile Include="Migrations\202104290531230_deleteIdNumberFromUser.designer.cs">
       <DependentUpon>202104290531230_deleteIdNumberFromUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105041735418_addVirtualProperties.cs" />
+    <Compile Include="Migrations\202105041735418_addVirtualProperties.designer.cs">
+      <DependentUpon>202105041735418_addVirtualProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105061705419_MakeMailUnique.cs" />
+    <Compile Include="Migrations\202105061705419_MakeMailUnique.designer.cs">
+      <DependentUpon>202105061705419_MakeMailUnique.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Repository.cs" />
@@ -164,6 +172,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104290531230_deleteIdNumberFromUser.resx">
       <DependentUpon>202104290531230_deleteIdNumberFromUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105041735418_addVirtualProperties.resx">
+      <DependentUpon>202105041735418_addVirtualProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105061705419_MakeMailUnique.resx">
+      <DependentUpon>202105061705419_MakeMailUnique.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

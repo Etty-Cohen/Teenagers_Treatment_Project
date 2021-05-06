@@ -15,7 +15,7 @@ namespace BE
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
         public string MailAddress { get; set; }
-        public virtual Address Address { get; set; }
+        public Address Address { get; set; }
         public bool IsConfirmed { get; set; }
         public string Description { get; set; }
 

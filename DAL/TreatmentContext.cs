@@ -12,13 +12,15 @@ namespace DAL
     {
         public TreatmentContext()
            : base("data source =.\\SQLEXPRESS; initial catalog = project; integrated security = SSPI")
-        { }
+        {
+            this.Configuration.LazyLoadingEnabled = false;
+        }
 
         public virtual DbSet<Admin> Admins { get; set; }
         public virtual DbSet<Mentor> Mentors { get; set; }
         public virtual DbSet<Volunteer> Volunteers { get; set; }
         public virtual DbSet<Treatment‏> Treatment‏s { get; set; }
-        public virtual DbSet<Appointment> Appointments { get; set; }//To Do להוסיף את כל מה שצריך בשביל הטבלה כולל קשרים והוספות במחלקות האחרות
+        public virtual DbSet<Appointment> Appointments { get; set; }
         public virtual DbSet<Teenager‏> Teenager‏s { get; set; }
         public virtual DbSet<VolunteerRequest> VolunteerRequests { get; set; }
         public virtual DbSet<Re‏commender> Re‏commenders‏ { get; set; }
@@ -91,16 +93,36 @@ namespace DAL
 
 
 
+             
+            
+            modelBuilder.Entity<Treatment>()
+                .Property(t => t.VolunteerId).IsOptional();
 
-            modelBuilder.Entity<Treatment>().Property(t => t.VolunteerId).IsOptional();
+            modelBuilder.Entity<Admin>()
+                .HasIndex(u => u.MailAddress)
+                .IsUnique();
+            modelBuilder.Entity<Admin>()
+                .Property(u => u.MailAddress).HasMaxLength(50);
 
-            //modelBuilder.Entity<Mentor>().Property(t => t.Teenagers).IsOptional();
-            // To Do
-            //    modelBuilder.Entity<Package>().Property(p => p.RecipientId).IsOptional();
-            //    modelBuilder.Entity<Distribution>().Property(p => p.AdminId).IsOptional();
-            //    modelBuilder.Entity<Distribution>().Property(p => p.VolunteerId).IsOptional();
+            modelBuilder.Entity<Mentor>()
+                .HasIndex(u => u.MailAddress)
+                .IsUnique();
+            modelBuilder.Entity<Mentor>()
+                .Property(u => u.MailAddress).HasMaxLength(50);
 
-            //}
+            modelBuilder.Entity<Volunteer>()
+                .HasIndex(u => u.MailAddress)
+                .IsUnique();
+            modelBuilder.Entity<Volunteer>()
+                .Property(u => u.MailAddress).HasMaxLength(50);
+
+            modelBuilder.Entity<Teenager>()
+                .HasIndex(u => u.MailAddress)
+                .IsUnique();
+            modelBuilder.Entity<Teenager>()
+                .Property(u => u.MailAddress).HasMaxLength(50);
+
+
 
         }
     }
