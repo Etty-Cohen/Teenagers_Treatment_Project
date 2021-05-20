@@ -1,31 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 using System.Web;
 using System.Web.Mvc;
+using System.Configuration;
+
+//using CW.Soloist.WebApplication.Filters.ActionFilters;
+
 
 namespace UI.Controllers
 {
+    /// <summary>
+    /// Controller responsible for handling requestes on the home page,
+    /// and general util services for the other controllers such as 
+    /// retrieving the path for the parent directory on the file server.
+    /// </summary>
+    [AllowAnonymous]
     public class HomeController : Controller
     {
-        // GET: /Home/
-        public ActionResult Index()
-        {
-            return View();
-        }
-        // GET: /Home/About
-        public ActionResult About()
-        {
-            ViewBag.Message = "יד ביד";
 
-            return View();
-        }
+        // Home page 
+        public ActionResult Index() => View();
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
 
-            return View();
-        }
+        // About page 
+        public ActionResult About() => View();
+
+
+        // Contact info 
+        //[CrawlerFilter]
+        public ActionResult Contact() => View();
+
     }
 }

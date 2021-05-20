@@ -1,38 +1,41 @@
-﻿<!DOCTYPE html>
-<div class="jumbotron">
-    <h1>יד ביד</h1>
-    <img alt="hands" class="class1" src="~/Images/hands.jpg" />
-    <style>
-        .class1 {
-            background-image: url('~/Images/hands.jpg');
-            width: 1000px;
-        }
-    </style>
+﻿@{
+    ViewBag.Title = "Home Page";
+}
 
+<div class="jumbotron">
+    <h1 style="color:gold; font-weight:bold">יד ביד</h1>
+    <p class="lead">
+        Soloist is an open-source free web application for assisting the process of
+        composing a <br />solo-melody improvisation over a given playback and it's underlying
+        chord progression.
+    </p>
+    <p>
+        <a href="@Url.Action("About", "Home")" class="btn btn-warning btn-lg">Learn more! &raquo;</a>
+        <a href="@Url.Action("Compose", "Composition")" class="btn btn-warning btn-lg">Try it now! &raquo;</a>
+    </p>
 </div>
 
-<html>
-<head>
-    @{
-        ViewBag.Title = "Home Page";
-    }
+<div class="row">
+    <div class="col-md-4">
+        <h2 style="color:lightgreen">The Theory Behind</h2>
+        <h3 style="color:#b6ff00">Algorithmic Composition and Genetic Algorithms</h3>
+        <h4>
+            Soloist implements a genetic algorithm for generating the melody output.
+            This algorithm maintains a set of candidate melodies which it changes and
+            evaluates in an iterative proccess, untill eventually the melody which is
+            evaluated as the best one is selected as the final output.
+        </h4>
+        <p><a class="btn btn-success" href="@Url.Action("Seminar", "Home")">Learn more &raquo;</a></p>
+    </div>
 
-</head>
-
-<body>
-    <h1>This is a heading</h1>
-    <p>This is a paragraph.</p>
-    <p>This is another paragraph.</p>
-    <img alt="hands" class="class1" src="~/Images/hands.jpg" />
-
-    <style>
-        .class1 {
-            background-image: url('~/Images/hands.jpg');
-        }
-    </style>
-</body>
-</html>
-
-
-
-
+    <div class="col-md-4">
+        <h2 style="color:lightgreen">Getting started</h2>
+        <h4>
+            Upload a MIDI file and chord progression for your favorite songs, or alternatively
+            select a song from the pre-existing samples, adjust the composition algorithm
+            parameters as you choose and that's it! your song would be able for download
+            with the new generated melody improvisation.
+        </h4>
+        <p><a class="btn btn-success" href="@Url.Action("Documentation", "Home")">Learn more &raquo;</a></p>
+    </div>
+</div>
